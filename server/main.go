@@ -55,8 +55,9 @@ var albums = []album{
 // @Produce     json
 // @Success     200 {string} Helloworld
 // @Router      /example/helloworld [get]
+
 func Helloworld(g *gin.Context) {
-	g.JSON(http.StatusOK, "haaaelloworld")
+	g.JSON(http.StatusOK, "haaaelloworlds!!w!!s")
 }
 
 func getAlbums(c *gin.Context) {
