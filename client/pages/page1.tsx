@@ -13,7 +13,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <h3>
-          Welcome to <a href="https://nextjs.org">Next.js!🈲🈲</a>
+          Welcome to <a href="https://nextjs.org">Nessxt.jsaaa!🈲🈲</a>
         </h3>
 
         <div>aaa</div>
