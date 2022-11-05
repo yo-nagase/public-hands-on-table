@@ -1,2 +1,3 @@
 # public-hands-on-table
-hands on table demo
+This is public repositoy to try hands on table and distribute sample code.
+
