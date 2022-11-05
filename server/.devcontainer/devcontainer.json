@@ -1,0 +1,43 @@
+{
+  "name": "Go devcontainer",
+  "dockerComposeFile": ["../../docker-compose.yml"],
+  "service": "server",
+  "workspaceFolder": "/app",
+  "settings": {
+    "go.toolsManagement.checkForUpdates": "off",
+    "go.gopath": "/go",
+    "go.gocodeAutoBuild": true,
+    "go.formatTool": "gofmt",
+    "go.useLanguageServer": true,
+    "editor.tabSize": 2,
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.renderWhitespace": "all",
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": "active",
+    "files.trimTrailingWhitespace": true,
+    "files.trimFinalNewlines": true,
+    "emeraldwalk.runonsave": {
+      // デバック時、airによって.tmp/mainのプロセスが起動されるので、ファイル保存時に強制的に.tmp/mainのプロセスを削除する
+      "commands": [
+        {
+          "match": ".*",
+          "isAsync": false,
+          "cmd": "ps aux | grep './tmp/main' | grep -v grep | awk '{ print $1 }' | xargs kill"
+        }
+      ]
+    }
+  },
+  "extensions": [
+    "golang.go",
+    "editorconfig.editorconfig",
+    "emeraldwalk.runonsave",
+    // コードのスペルチェッカー
+    "streetsidesoftware.code-spell-checker"
+  ],
+  "onCreateCommand": "",
+  "updateContentCommand": "",
+  "postCreateCommand": "",
+  "shutdownAction": "none"
+}
