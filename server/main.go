@@ -56,7 +56,7 @@ var albums = []album{
 // @Success     200 {string} Helloworld
 // @Router      /example/helloworld [get]
 func Helloworld(g *gin.Context) {
-	g.JSON(http.StatusOK, "helloworld")
+	g.JSON(http.StatusOK, "haaaelloworld")
 }
 
 func getAlbums(c *gin.Context) {
@@ -93,7 +93,7 @@ func getAlbumByID(c *gin.Context) {
 func SetupRouter() *gin.Engine {
 	router := gin.Default()
 	docs.SwaggerInfo.BasePath = "/api/v1"
-
+	router.GET("/", Helloworld)
 	router.GET("/hello", Helloworld)
 	router.GET("/albums", getAlbums)
 	router.GET("/albums/:id", getAlbumByID)
