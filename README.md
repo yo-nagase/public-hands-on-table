@@ -30,3 +30,10 @@ http://localhost:3434
 
 ## 確認
 ソースコードを修正してアクセスすると、修正内容が反映されていることを確認します。
+
+
+### ログを見る
+
+コンテナのログを見るには、VSCodeの左側にあるアイコンをクリック＞対象のコンテナを選択＞Show Container Logを選択する。
+こうすると、VSCode内にログが表示される様になります
+![image](https://user-images.githubusercontent.com/19295829/200152732-42a891b1-7445-4f3d-a853-daa21b8dd654.png)
