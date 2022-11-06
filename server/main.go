@@ -15,7 +15,7 @@ func SetupRouter() *gin.Engine {
 
 	router.GET("/", func(c *gin.Context) {
 		c.JSON(http.StatusOK, gin.H{
-			"message": "ccccc",
+			"message": "cccccvcvc",
 		})
 	})
 	router.GET("/hello", Helloworld)
