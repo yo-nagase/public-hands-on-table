@@ -3,20 +3,20 @@ version: '3.8'
 services:
   server:
     build:
-      context: ../server/
+      context: ./server/
       dockerfile: Dockerfile
       target: dev
     ports:
       - 8888:8080
       - 2345:2345
     volumes:
-      - ../server/:/app
+      - ./server/:/app
   client:
     build:
-      context: ../client/
+      context: ./client/
       dockerfile: Dockerfile
     #  target: dev
     volumes:
-      - ../client:/app
+      - ./client:/app
     ports:
       - 3434:3000
