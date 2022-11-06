@@ -15,14 +15,14 @@ func SetupRouter() *gin.Engine {
 
 	router.GET("/", func(c *gin.Context) {
 		c.JSON(http.StatusOK, gin.H{
-			"message": "pong",
+			"message": "ccccc",
 		})
 	})
 	router.GET("/hello", Helloworld)
 
 	// Ping test
 	router.GET("/ping", func(c *gin.Context) {
-		c.String(http.StatusOK, "pong")
+		c.String(http.StatusOK, "pafffaong")
 	})
 	return router
 }
